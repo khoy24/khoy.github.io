@@ -1,2 +1,2 @@
 # PersonalWebsite
-Contains my Personal Website (W.I.P)
+Contains my Personal Website. Is currently a work in progress. 
