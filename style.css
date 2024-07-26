@@ -176,48 +176,6 @@ section h1 {
     border-radius: 50%;
 }
 
-/* About Me Page */
-.AboutMeIntro {
-    display: flex;
-    /* justify-content: center; */
-    align-items:flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    overflow: hidden;
-}
-
-.AboutMeIntro h1 {
-    margin-top: 3em;
-    font-size: 3em;
-    text-align: justify;
-    flex-wrap: wrap;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-
-.AboutMeIntro p {
-    font-size:1.5em;
-    text-align:justify;
-    word-break: break-all;
-    flex-wrap: wrap;
-    padding: 0;
-    /* max-width: 75%; */
-    /* white-space: inital; */
-}
-
-/* crops images to a circle with the center of image centered */
-.AboutMeIntro img {
-    object-fit: cover;
-    border-radius: 50%;
-    height: 25em;
-    width: 25em;
-    margin-left: 3em;
-    margin-right:2em;
-    margin-top: 5em;
-    margin-bottom:2em;
-    float: left;
-}
-
 /* ids */
 #socialIconResize {
     /* resize: 10%; */
@@ -312,6 +270,8 @@ section div {
     /* background: red; */
     margin-bottom: 4em;
     margin-top: 2em;
+    padding-left: 20px;
+    padding-right: 20px;
     
     /* flex-wrap: wrap; */
 }
@@ -320,4 +280,84 @@ section div img {
     margin:auto;
     width: 300px;
     height: 300px;
+}
+
+/* About me */
+
+.centerHeader {
+    text-align: center;
+}
+
+.AboutMeDivs{
+    margin:auto;
+    overflow-x: hidden;
+}
+
+.TopAboutMe{
+    margin-left: 10%;
+    margin-top: 2em;
+    display: flex;
+    margin: auto;
+    width:1200px;
+    overflow:hidden;
+    flex-direction: row;
+    
+}
+
+.TopAboutMeImg {
+    margin:auto;
+    padding-right: .5%;
+    
+}
+
+.TopAboutMeImg img{
+    width: 400px;
+    height: 605px;
+}
+
+.TopAboutMeTxt {
+    margin:auto;
+    width: 600px;
+    height: 455px;
+    padding-left: .5%;
+    font-size: 20px;
+    
+}
+
+h3 {
+    font-weight:400;
+}
+
+
+/* creates a gap between divs when the screen shrinks to a point where the topaboutmediv wraps */
+@media screen and (max-width: 1160px) {
+
+    .AboutMeDivs {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .TopAboutMe {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    } 
+
+    .TopAboutMeImg {
+        padding-right: 0%;
+    }
+
+    .TopAboutMeImg img{
+        width: 320px;
+        height: 505px;
+    }
+
+}
+/* wrap text when screens too small */
+@media screen and (max-width: 632px){
+
+    .TopAboutMeTxt {
+        width: 95%;
+    }
+
 }
